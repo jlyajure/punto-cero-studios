@@ -8,24 +8,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
-        /* 🎨 LA PINTURA DE LA AGENCIA (OPCIÓN 2) */
+        /* 🎨 PINTURA MODO CINE VIP (OSCURO + ROJO REC) */
         :root { 
-            /* 🎨 NUEVA PINTURA NOCTURNA (DARK MODE VIP) */
-        :root { 
-            --bg-color: #1a1a1a; /* Fondo gris oscuro / grafito profundo 🌑 */
-            --text-main: #ffffff; /* Texto blanco puro y brillante ⚪ */
-            --accent: #FFD700; /* Amarillo Eléctrico ⚡ (Mantenemos el amarillo para que resalte) */
-            --accent-hover: #e6c200;
-        }
+            --bg-color: #080808; /* Negro profundo casi puro 🌑 */
+            --text-main: #ffffff; /* Texto blanco brillante ⚪ */
+            --accent: #ff4444; /* Rojo REC de cámara 🔴 */
+            --accent-hover: #cc0000;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
         
         body { background-color: var(--bg-color); color: var(--text-main); overflow-x: hidden; }
 
-        /* 🚧 BARRA DE NAVEGACIÓN */
+        /* 🚧 BARRA DE NAVEGACIÓN OSCURA */
         header { 
-            background: rgba(255, 255, 255, 0.95); 
+            background: rgba(0, 0, 0, 0.95); 
             backdrop-filter: blur(10px);
             padding: 20px 30px; 
             display: flex; 
@@ -34,22 +31,22 @@
             position: fixed; 
             top: 0; width: 100%; 
             z-index: 100;
-            border-bottom: 2px solid #eeeeee;
+            border-bottom: 1px solid #222; /* Borde sutil oscuro */
         }
         .logo { font-size: 22px; font-weight: 900; letter-spacing: -1px; text-transform: uppercase; display: flex; align-items: center; gap: 5px; }
         .logo-punto { color: var(--accent); font-size: 28px; }
         
         .btn-contacto { 
             background: var(--text-main); 
-            color: var(--accent); 
+            color: #000; 
             text-decoration: none; 
             padding: 10px 20px; 
             border-radius: 8px; 
-            font-weight: 700; 
+            font-weight: 900; 
             font-size: 14px;
             transition: 0.3s;
         }
-        .btn-contacto:hover { background: var(--accent); color: var(--text-main); }
+        .btn-contacto:hover { background: var(--accent); color: #fff; }
 
         /* 🎬 SECCIÓN PRINCIPAL (EL HERO) */
         .hero { 
@@ -68,10 +65,10 @@
             text-transform: uppercase; 
             margin-bottom: 20px;
         }
-        .hero h1 span { background: var(--accent); padding: 0 10px; color: var(--text-main); display: inline-block; transform: skewX(-10deg); }
+        .hero h1 span { background: var(--accent); padding: 0 10px; color: #fff; display: inline-block; transform: skewX(-10deg); }
         .hero p { 
             font-size: 18px; 
-            color: #555; 
+            color: #aaa; 
             max-width: 600px; 
             line-height: 1.6; 
             margin-bottom: 40px; 
@@ -81,47 +78,49 @@
         .btn-main {
             display: inline-block;
             background: var(--accent);
-            color: var(--text-main);
+            color: #fff;
             font-size: 18px;
             font-weight: 900;
             padding: 18px 40px;
             text-decoration: none;
             border-radius: 50px;
             text-transform: uppercase;
-            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+            box-shadow: 0 10px 20px rgba(255, 68, 68, 0.2);
             transition: transform 0.2s;
         }
-        .btn-main:hover { transform: translateY(-5px); background: var(--accent-hover); }
+        .btn-main:hover { transform: translateY(-5px); background: var(--accent-hover); box-shadow: 0 10px 20px rgba(255, 68, 68, 0.4); }
 
-        /* 🛠️ ÁREA DE VIDEO DE MUESTRA (SIMULADA POR AHORA) */
+        /* 🛠️ ÁREA DE VIDEO DE MUESTRA */
         .video-placeholder {
             width: 100%;
             height: 400px;
-            background: #222;
+            background: #111;
             border-radius: 20px;
             margin-top: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #888;
+            color: #555;
             font-weight: bold;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 1px solid #333;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
             position: relative;
             overflow: hidden;
         }
         .video-placeholder::after {
             content: "▶";
             font-size: 60px;
-            color: white;
-            opacity: 0.5;
+            color: var(--accent);
+            opacity: 0.8;
         }
 
-        /* 🚀 SECCIÓN DE SERVICIOS RÁPIDA */
-        .servicios { padding: 80px 30px; background: white; }
+        /* 🚀 SECCIÓN DE SERVICIOS OSCURA */
+        .servicios { padding: 80px 30px; background: #0a0a0a; }
         .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
-        .servicio-card { background: var(--bg-color); padding: 40px; border-radius: 15px; border-top: 5px solid var(--accent); }
-        .servicio-card h3 { font-size: 22px; font-weight: 900; margin-bottom: 15px; }
-        .servicio-card p { font-size: 14px; color: #666; line-height: 1.5; }
+        .servicio-card { background: #151515; padding: 40px; border-radius: 15px; border-top: 5px solid var(--accent); transition: transform 0.3s; }
+        .servicio-card:hover { transform: translateY(-5px); }
+        .servicio-card h3 { font-size: 22px; font-weight: 900; margin-bottom: 15px; color: #fff;}
+        .servicio-card p { font-size: 14px; color: #888; line-height: 1.5; }
 
     </style>
 </head>
