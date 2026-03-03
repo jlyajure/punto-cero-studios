@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Punto Cero Studios | Agencia Audiovisual</title>
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
-    
     <meta name="theme-color" content="#080808">
-    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
@@ -37,56 +34,53 @@
         }
 
         .logo-cine { 
-            font-size: 22px; 
-            font-weight: 900; 
-            letter-spacing: -1.5px; 
-            text-transform: uppercase; 
-            color: #f0f0f0; 
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            text-decoration: none;
+            font-size: 22px; font-weight: 900; letter-spacing: -1.5px; text-transform: uppercase; color: #f0f0f0; display: flex; align-items: center; gap: 5px; text-decoration: none;
         }
         .studios-text { font-weight: 400; font-size: 13px; color: #aaa; letter-spacing: 2px; margin-left: 5px; }
         .dot-rec { width: 10px; height: 10px; background-color: var(--accent); border-radius: 50%; display: inline-block; box-shadow: 0 0 10px var(--accent); animation: parpadeo 2s infinite; }
         @keyframes parpadeo { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
         
-        .btn-contacto { 
-            background: var(--text-main); 
-            color: #000; 
-            text-decoration: none; 
-            padding: 10px 18px; 
-            border-radius: 8px; 
-            font-weight: 900; 
-            font-size: 13px;
-            transition: 0.3s;
-        }
+        .btn-contacto { background: var(--text-main); color: #000; text-decoration: none; padding: 10px 18px; border-radius: 8px; font-weight: 900; font-size: 13px; transition: 0.3s; }
         .btn-contacto:hover { background: var(--accent); color: #fff; }
 
-        .hero { 
-            min-height: 100vh; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            padding: 120px 30px 50px 30px; 
-            max-width: 1200px; 
-            margin: 0 auto;
-        }
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 120px 30px 50px 30px; max-width: 1200px; margin: 0 auto; }
         .hero h1 { font-size: clamp(35px, 8vw, 75px); font-weight: 900; line-height: 1.1; text-transform: uppercase; margin-bottom: 20px; }
         .hero h1 span { background: var(--accent); padding: 0 10px; color: #fff; display: inline-block; transform: skewX(-10deg); }
         .hero p { font-size: 18px; color: #aaa; max-width: 600px; line-height: 1.6; margin-bottom: 40px; }
-
-        .btn-main { display: inline-block; background: var(--accent); color: #fff; font-size: 18px; font-weight: 900; padding: 18px 40px; text-decoration: none; border-radius: 50px; text-transform: uppercase; transition: 0.3s; }
-        .btn-main:hover { transform: scale(1.05); background: var(--accent-hover); }
 
         .video-container { width: 100%; height: 400px; border-radius: 20px; margin-top: 50px; position: relative; overflow: hidden; border: 1px solid #333; background: #111; }
         .video-bg { width: 100%; height: 100%; object-fit: cover; }
         .video-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.5); font-size: 20px; font-weight: 900; letter-spacing: 5px; }
 
+        /* 🖼️ SECCIÓN PORTAFOLIO */
+        .portafolio { padding: 80px 30px; background: #080808; }
+        .portafolio h2 { text-align: center; font-size: 30px; font-weight: 900; margin-bottom: 40px; text-transform: uppercase; }
+        .portafolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; max-width: 1200px; margin: 0 auto; }
+        
+        .trabajo-card { 
+            position: relative; 
+            height: 250px; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            background: #111; 
+            border: 1px solid #222;
+            cursor: pointer;
+        }
+        .trabajo-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .trabajo-card:hover img { transform: scale(1.1); filter: grayscale(100%) brightness(0.5); }
+        
+        .trabajo-info { 
+            position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            opacity: 0; transition: 0.3s; background: rgba(255, 68, 68, 0.2); 
+        }
+        .trabajo-card:hover .trabajo-info { opacity: 1; }
+        .trabajo-info h4 { font-weight: 900; text-transform: uppercase; font-size: 18px; }
+        .trabajo-info span { font-size: 12px; font-weight: 400; letter-spacing: 2px; margin-top: 5px; }
+
+        /* 🚀 SECCIÓN SERVICIOS */
         .servicios { padding: 80px 30px; background: #0a0a0a; }
         .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
         .servicio-card { background: #151515; padding: 30px; border-radius: 15px; border-top: 4px solid var(--accent); transition: 0.3s; }
-        .servicio-card:hover { transform: translateY(-5px); background: #1c1c1c; }
         .servicio-card h3 { font-size: 20px; font-weight: 900; margin-bottom: 15px; color: #fff; }
         .servicio-card p { font-size: 14px; color: #999; line-height: 1.5; }
 
@@ -102,7 +96,6 @@
     <section class="hero">
         <h1>CREAMOS<br><span>VISIÓN.</span><br>CONSTRUIMOS<br>MARCAS.</h1>
         <p>Productora audiovisual especializada en potenciar tu negocio. Llevamos tus ideas desde el punto cero hasta la máxima calidad visual.</p>
-        <div><a href="#" class="btn-main">Ver Portafolio</a></div>
         <div class="video-container">
             <video autoplay loop muted playsinline class="video-bg">
                 <source src="https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4" type="video/mp4">
@@ -111,25 +104,47 @@
         </div>
     </section>
 
+    <section class="portafolio">
+        <h2>Nuestro Trabajo</h2>
+        <div class="portafolio-grid">
+            <div class="trabajo-card">
+                <img src="https://images.pexels.com/photos/257904/pexels-photo-257904.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Video">
+                <div class="trabajo-info">
+                    <h4>Comercial de Marca</h4>
+                    <span>VIDEO / EDICIÓN</span>
+                </div>
+            </div>
+            <div class="trabajo-card">
+                <img src="https://images.pexels.com/photos/3379934/pexels-photo-3379934.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Foto">
+                <div class="trabajo-info">
+                    <h4>Sesión Retrato</h4>
+                    <span>FOTOGRAFÍA</span>
+                </div>
+            </div>
+            <div class="trabajo-card">
+                <img src="https://images.pexels.com/photos/2511234/pexels-photo-2511234.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Producto">
+                <div class="trabajo-info">
+                    <h4>Catálogo Gourmet</h4>
+                    <span>FOTOGRAFÍA PRODUCTO</span>
+                </div>
+            </div>
+            <div class="trabajo-card">
+                <img src="https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Redes">
+                <div class="trabajo-info">
+                    <h4>Contenido Reels</h4>
+                    <span>EDICIÓN DINÁMICA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="servicios">
         <h2 style="text-align: center; font-size: 30px; font-weight: 900; margin-bottom: 40px;">NUESTROS SERVICIOS</h2>
         <div class="servicios-grid">
-            <div class="servicio-card">
-                <h3>✂️ Edición para Redes</h3>
-                <p>Videos dinámicos para Reels y TikTok con subtítulos, música y ritmo profesional.</p>
-            </div>
-            <div class="servicio-card">
-                <h3>🎥 Grabación Comercial</h3>
-                <p>Grabamos tus productos o local con calidad de estudio. Nosotros detrás del lente.</p>
-            </div>
-            <div class="servicio-card">
-                <h3>📸 Fotografía de Producto</h3>
-                <p>Sesiones de alta calidad para catálogos y redes. Imágenes que venden solas.</p>
-            </div>
-            <div class="servicio-card">
-                <h3>🎨 Diseño Publicitario</h3>
-                <p>Flyers digitales impactantes para WhatsApp e Instagram. Diseño que capta la atención.</p>
-            </div>
+            <div class="servicio-card"><h3>✂️ Edición para Redes</h3><p>Videos dinámicos para Reels y TikTok con subtítulos, música y ritmo profesional.</p></div>
+            <div class="servicio-card"><h3>🎥 Grabación Comercial</h3><p>Grabamos tus productos o local con calidad de estudio. Nosotros detrás del lente.</p></div>
+            <div class="servicio-card"><h3>📸 Fotografía de Producto</h3><p>Sesiones de alta calidad para catálogos y redes. Imágenes que venden solas.</p></div>
+            <div class="servicio-card"><h3>🎨 Diseño Publicitario</h3><p>Flyers digitales impactantes para WhatsApp e Instagram. Diseño que capta la atención.</p></div>
         </div>
     </section>
 
