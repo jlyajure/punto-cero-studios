@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
-        /* 🎨 PINTURA MODO CINE VIP (OSCURO + ROJO REC) */
+        /* 🎨 PINTURA MODO CINE VIP (OSCURO) */
         :root { 
             --bg-color: #080808; 
             --text-main: #ffffff; 
@@ -21,7 +21,7 @@
         
         body { background-color: var(--bg-color); color: var(--text-main); overflow-x: hidden; }
 
-        /* 🚧 BARRA DE NAVEGACIÓN OSCURA */
+        /* 🚧 BARRA DE NAVEGACIÓN */
         header { 
             background: rgba(0, 0, 0, 0.95); 
             backdrop-filter: blur(10px);
@@ -35,9 +35,9 @@
             border-bottom: 1px solid #222; 
         }
 
-        /* 📸 LOGO DE CÓDIGO (Plan Z) */
+        /* 📸 LOGO REC */
         .logo-cine { 
-            font-size: 24px; 
+            font-size: 22px; 
             font-weight: 900; 
             letter-spacing: -1.5px; 
             text-transform: uppercase; 
@@ -47,140 +47,64 @@
             gap: 5px;
             text-decoration: none;
         }
-        .studios-text {
-            font-weight: 400; 
-            font-size: 14px;
-            color: #aaa; 
-            letter-spacing: 2px; 
-            margin-left: 5px;
-        }
-        .dot-rec {
-            width: 12px;
-            height: 12px;
-            background-color: var(--accent);
-            border-radius: 50%;
-            display: inline-block;
-            box-shadow: 0 0 10px var(--accent);
-            animation: parpadeo 2s infinite; 
-        }
-        @keyframes parpadeo {
-            0% { opacity: 1; }
-            50% { opacity: 0.3; }
-            100% { opacity: 1; }
-        }
+        .studios-text { font-weight: 400; font-size: 13px; color: #aaa; letter-spacing: 2px; margin-left: 5px; }
+        .dot-rec { width: 10px; height: 10px; background-color: var(--accent); border-radius: 50%; display: inline-block; box-shadow: 0 0 10px var(--accent); animation: parpadeo 2s infinite; }
+        @keyframes parpadeo { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
         
         .btn-contacto { 
             background: var(--text-main); 
             color: #000; 
             text-decoration: none; 
-            padding: 10px 20px; 
+            padding: 10px 18px; 
             border-radius: 8px; 
             font-weight: 900; 
-            font-size: 14px;
+            font-size: 13px;
             transition: 0.3s;
         }
         .btn-contacto:hover { background: var(--accent); color: #fff; }
 
-        /* 🎬 SECCIÓN PRINCIPAL (EL HERO) */
+        /* 🎬 SECCIÓN HERO */
         .hero { 
             min-height: 100vh; 
             display: flex; 
             flex-direction: column; 
             justify-content: center; 
-            padding: 100px 30px 50px 30px; 
+            padding: 120px 30px 50px 30px; 
             max-width: 1200px; 
             margin: 0 auto;
         }
-        .hero h1 { 
-            font-size: clamp(40px, 8vw, 80px); 
-            font-weight: 900; 
-            line-height: 1.1; 
-            text-transform: uppercase; 
-            margin-bottom: 20px;
-        }
+        .hero h1 { font-size: clamp(35px, 8vw, 75px); font-weight: 900; line-height: 1.1; text-transform: uppercase; margin-bottom: 20px; }
         .hero h1 span { background: var(--accent); padding: 0 10px; color: #fff; display: inline-block; transform: skewX(-10deg); }
-        .hero p { 
-            font-size: 18px; 
-            color: #aaa; 
-            max-width: 600px; 
-            line-height: 1.6; 
-            margin-bottom: 40px; 
-            font-weight: 400;
-        }
+        .hero p { font-size: 18px; color: #aaa; max-width: 600px; line-height: 1.6; margin-bottom: 40px; }
 
-        .btn-main {
-            display: inline-block;
-            background: var(--accent);
-            color: #fff;
-            font-size: 18px;
-            font-weight: 900;
-            padding: 18px 40px;
-            text-decoration: none;
-            border-radius: 50px;
-            text-transform: uppercase;
-            box-shadow: 0 10px 20px rgba(255, 68, 68, 0.2);
-            transition: transform 0.2s;
-        }
-        .btn-main:hover { transform: translateY(-5px); background: var(--accent-hover); box-shadow: 0 10px 20px rgba(255, 68, 68, 0.4); }
+        .btn-main { display: inline-block; background: var(--accent); color: #fff; font-size: 18px; font-weight: 900; padding: 18px 40px; text-decoration: none; border-radius: 50px; text-transform: uppercase; transition: 0.3s; }
+        .btn-main:hover { transform: scale(1.05); background: var(--accent-hover); }
 
-        /* 🎥 ÁREA DE VIDEO REAL */
-        .video-container {
-            width: 100%;
-            height: 400px; 
-            border-radius: 20px;
-            margin-top: 50px;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid #333;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
-            background: #111;
-        }
-        .video-bg {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; 
-            pointer-events: none; 
-        }
-        .video-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(0,0,0,0.4); 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 20px;
-            font-weight: 900;
-            letter-spacing: 5px;
-        }
+        .video-container { width: 100%; height: 400px; border-radius: 20px; margin-top: 50px; position: relative; overflow: hidden; border: 1px solid #333; background: #111; }
+        .video-bg { width: 100%; height: 100%; object-fit: cover; }
+        .video-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.5); font-size: 20px; font-weight: 900; letter-spacing: 5px; }
 
-        /* 🚀 SECCIÓN DE SERVICIOS */
+        /* 🚀 SECCIÓN SERVICIOS */
         .servicios { padding: 80px 30px; background: #0a0a0a; }
-        .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
-        .servicio-card { background: #151515; padding: 40px; border-radius: 15px; border-top: 5px solid var(--accent); transition: transform 0.3s; }
-        .servicio-card:hover { transform: translateY(-5px); }
-        .servicio-card h3 { font-size: 22px; font-weight: 900; margin-bottom: 15px; color: #fff;}
-        .servicio-card p { font-size: 14px; color: #888; line-height: 1.5; }
+        .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .servicio-card { background: #151515; padding: 30px; border-radius: 15px; border-top: 4px solid var(--accent); transition: 0.3s; }
+        .servicio-card:hover { transform: translateY(-5px); background: #1c1c1c; }
+        .servicio-card h3 { font-size: 20px; font-weight: 900; margin-bottom: 15px; color: #fff; }
+        .servicio-card p { font-size: 14px; color: #999; line-height: 1.5; }
 
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-cine">
-            PUNTO CERO <span class="dot-rec"></span> <span class="studios-text">STUDIOS</span>
-        </div>
-        <a href="https://wa.me/584120000000?text=Hola%20Punto%20Cero%20Studios,%20me%20gustar%C3%ADa%20cotizar%20un%20servicio%20audiovisual." target="_blank" class="btn-contacto">HABLEMOS</a>
+        <div class="logo-cine">PUNTO CERO <span class="dot-rec"></span> <span class="studios-text">STUDIOS</span></div>
+        <a href="https://wa.me/584120000000?text=Hola%20Punto%20Cero%20Studios,%20quiero%20cotizar%20un%20servicio." target="_blank" class="btn-contacto">HABLEMOS</a>
     </header>
 
     <section class="hero">
         <h1>CREAMOS<br><span>VISIÓN.</span><br>CONSTRUIMOS<br>MARCAS.</h1>
-        <p>Productora audiovisual especializada en potenciar la imagen de tu negocio. Llevamos tus ideas desde el punto cero hasta la máxima calidad visual.</p>
-        
-        <div>
-            <a href="#" class="btn-main">Ver Portafolio</a>
-        </div>
-
+        <p>Productora audiovisual especializada en potenciar tu negocio. Llevamos tus ideas desde el punto cero hasta la máxima calidad visual.</p>
+        <div><a href="#" class="btn-main">Ver Portafolio</a></div>
         <div class="video-container">
             <video autoplay loop muted playsinline class="video-bg">
                 <source src="https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4" type="video/mp4">
@@ -190,23 +114,23 @@
     </section>
 
     <section class="servicios">
-        <h2 style="text-align: center; font-size: 35px; font-weight: 900; margin-bottom: 50px;">NUESTROS SERVICIOS</h2>
+        <h2 style="text-align: center; font-size: 30px; font-weight: 900; margin-bottom: 40px;">NUESTROS SERVICIOS</h2>
         <div class="servicios-grid">
             <div class="servicio-card">
                 <h3>✂️ Edición para Redes</h3>
-                <p>Transformamos tu material en videos dinámicos para Reels y TikTok. Agregamos subtítulos atractivos, música en tendencia y ritmo profesional.</p>
+                <p>Videos dinámicos para Reels y TikTok con subtítulos, música y ritmo profesional.</p>
             </div>
             <div class="servicio-card">
                 <h3>🎥 Grabación Comercial</h3>
-                <p>Capturamos la esencia de tu negocio. Grabamos tus productos, tu local o entrevistas con calidad de estudio. Nosotros siempre detrás de cámara.</p>
+                <p>Grabamos tus productos o local con calidad de estudio. Nosotros detrás del lente.</p>
             </div>
             <div class="servicio-card">
                 <h3>📸 Fotografía de Producto</h3>
-                <p>Sesiones fotográficas de alta calidad para catálogos, gastronomía y retratos corporativos. Imágenes que venden a primera vista.</p>
+                <p>Sesiones de alta calidad para catálogos y redes. Imágenes que venden solas.</p>
             </div>
             <div class="servicio-card">
                 <h3>🎨 Diseño Publicitario</h3>
-                <p>Creación de Flyers digitales impactantes para WhatsApp, Instagram y Facebook. Diseños modernos que captan la atención al instante.</p>
+                <p>Flyers digitales impactantes para WhatsApp e Instagram. Diseño que capta la atención.</p>
             </div>
         </div>
     </section>
