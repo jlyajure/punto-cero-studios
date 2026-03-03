@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto Cero Studios | Agencia Audiovisual</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 🎨 LA PINTURA DE LA AGENCIA (OPCIÓN 2) */
+        :root { 
+            --bg-color: #f8f9fa; /* Blanco perlado/grisecito muy limpio */
+            --text-main: #111111; /* Negro casi puro */
+            --accent: #FFD700; /* Amarillo Eléctrico */
+            --accent-hover: #e6c200;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; }
+        
+        body { background-color: var(--bg-color); color: var(--text-main); overflow-x: hidden; }
+
+        /* 🚧 BARRA DE NAVEGACIÓN */
+        header { 
+            background: rgba(255, 255, 255, 0.95); 
+            backdrop-filter: blur(10px);
+            padding: 20px 30px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: fixed; 
+            top: 0; width: 100%; 
+            z-index: 100;
+            border-bottom: 2px solid #eeeeee;
+        }
+        .logo { font-size: 22px; font-weight: 900; letter-spacing: -1px; text-transform: uppercase; display: flex; align-items: center; gap: 5px; }
+        .logo-punto { color: var(--accent); font-size: 28px; }
+        
+        .btn-contacto { 
+            background: var(--text-main); 
+            color: var(--accent); 
+            text-decoration: none; 
+            padding: 10px 20px; 
+            border-radius: 8px; 
+            font-weight: 700; 
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .btn-contacto:hover { background: var(--accent); color: var(--text-main); }
+
+        /* 🎬 SECCIÓN PRINCIPAL (EL HERO) */
+        .hero { 
+            min-height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            padding: 100px 30px 50px 30px; 
+            max-width: 1200px; 
+            margin: 0 auto;
+        }
+        .hero h1 { 
+            font-size: clamp(40px, 8vw, 80px); /* Se adapta al celular o PC */
+            font-weight: 900; 
+            line-height: 1.1; 
+            text-transform: uppercase; 
+            margin-bottom: 20px;
+        }
+        .hero h1 span { background: var(--accent); padding: 0 10px; color: var(--text-main); display: inline-block; transform: skewX(-10deg); }
+        .hero p { 
+            font-size: 18px; 
+            color: #555; 
+            max-width: 600px; 
+            line-height: 1.6; 
+            margin-bottom: 40px; 
+            font-weight: 400;
+        }
+
+        .btn-main {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--text-main);
+            font-size: 18px;
+            font-weight: 900;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+            transition: transform 0.2s;
+        }
+        .btn-main:hover { transform: translateY(-5px); background: var(--accent-hover); }
+
+        /* 🛠️ ÁREA DE VIDEO DE MUESTRA (SIMULADA POR AHORA) */
+        .video-placeholder {
+            width: 100%;
+            height: 400px;
+            background: #222;
+            border-radius: 20px;
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-weight: bold;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .video-placeholder::after {
+            content: "▶";
+            font-size: 60px;
+            color: white;
+            opacity: 0.5;
+        }
+
+        /* 🚀 SECCIÓN DE SERVICIOS RÁPIDA */
+        .servicios { padding: 80px 30px; background: white; }
+        .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .servicio-card { background: var(--bg-color); padding: 40px; border-radius: 15px; border-top: 5px solid var(--accent); }
+        .servicio-card h3 { font-size: 22px; font-weight: 900; margin-bottom: 15px; }
+        .servicio-card p { font-size: 14px; color: #666; line-height: 1.5; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">PUNTO CERO<span class="logo-punto">.</span></div>
+        <a href="#contacto" class="btn-contacto">HABLEMOS</a>
+    </header>
+
+    <section class="hero">
+        <h1>CREAMOS<br><span>VISIÓN.</span><br>CONSTRUIMOS<br>MARCAS.</h1>
+        <p>Productora audiovisual especializada en videoclips, comerciales, cobertura de eventos y tomas aéreas. Llevamos tus ideas desde el punto cero hasta la máxima calidad.</p>
+        
+        <div>
+            <a href="#" class="btn-main">Ver Portafolio</a>
+        </div>
+
+        <div class="video-placeholder">
+            Aquí irá tu Showreel (Video resumen)
+        </div>
+    </section>
+
+    <section class="servicios">
+        <h2 style="text-align: center; font-size: 35px; font-weight: 900; margin-bottom: 50px;">NUESTROS SERVICIOS</h2>
+        <div class="servicios-grid">
+            <div class="servicio-card">
+                <h3>🎥 Producción de Video</h3>
+                <p>Videoclips musicales, comerciales para empresas y cobertura cinematográfica de eventos especiales.</p>
+            </div>
+            <div class="servicio-card">
+                <h3>🚁 Tomas Aéreas</h3>
+                <p>Imágenes impactantes con drones de última generación para darle altura y nivel a tus proyectos.</p>
+            </div>
+            <div class="servicio-card">
+                <h3>✂️ Edición Post-Producción</h3>
+                <p>Colorización profesional, efectos visuales y montaje dinámico para redes sociales y TV.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
