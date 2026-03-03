@@ -20,11 +20,11 @@
         
         body { background-color: var(--bg-color); color: var(--text-main); overflow-x: hidden; }
 
-        /* 🚧 BARRA DE NAVEGACIÓN OSCURA */
+        /* 🚧 BARRA DE NAVEGACIÓN OSCURA CON LOGO DE IMAGEN */
         header { 
             background: rgba(0, 0, 0, 0.95); 
             backdrop-filter: blur(10px);
-            padding: 20px 30px; 
+            padding: 10px 30px; /* Reduje el padding para que la barra no sea tan gorda */
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
@@ -33,8 +33,17 @@
             z-index: 100;
             border-bottom: 1px solid #222; 
         }
-        .logo { font-size: 22px; font-weight: 900; letter-spacing: -1px; text-transform: uppercase; display: flex; align-items: center; gap: 5px; }
-        .logo-punto { color: var(--accent); font-size: 28px; }
+        
+        /* 📸 NUEVO ESTILO PARA EL LOGO (sacamos el texto, metimos la imagen) */
+        .logo-box { 
+            height: 55px; /* Altura de la barra */
+            display: flex; 
+            align-items: center; 
+        }
+        .logo-img { 
+            height: 100%; /* La imagen se adapta a la altura del cuadro */
+            object-fit: contain; /* No se estira ni se deforma */
+        }
         
         .btn-contacto { 
             background: var(--text-main); 
@@ -134,7 +143,9 @@
 <body>
 
     <header>
-        <div class="logo">PUNTO CERO<span class="logo-punto">.</span></div>
+        <div class="logo-box">
+            <img src="https://images2.imgbox.com/39/b5/h305bF7A_o.png" alt="PUNTO CERO Studios" class="logo-img">
+        </div>
         <a href="#contacto" class="btn-contacto">HABLEMOS</a>
     </header>
 
