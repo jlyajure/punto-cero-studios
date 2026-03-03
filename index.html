@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Punto Cero Studios | Agencia Audiovisual</title>
     
+    <meta property="og:title" content="Punto Cero Studios | Agencia Audiovisual">
+    <meta property="og:description" content="Llevamos tus ideas desde el punto cero hasta la máxima calidad visual. Edición, Grabación y Fotografía Profesional.">
+    <meta property="og:image" content="https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg?auto=compress&cs=tinysrgb&w=1200">
+    <meta property="og:type" content="website">
+
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
+    
     <meta name="theme-color" content="#080808">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     
@@ -52,32 +59,17 @@
         .video-bg { width: 100%; height: 100%; object-fit: cover; }
         .video-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.5); font-size: 20px; font-weight: 900; letter-spacing: 5px; }
 
-        /* 🖼️ SECCIÓN PORTAFOLIO */
         .portafolio { padding: 80px 30px; background: #080808; }
         .portafolio h2 { text-align: center; font-size: 30px; font-weight: 900; margin-bottom: 40px; text-transform: uppercase; }
         .portafolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; max-width: 1200px; margin: 0 auto; }
-        
-        .trabajo-card { 
-            position: relative; 
-            height: 250px; 
-            border-radius: 12px; 
-            overflow: hidden; 
-            background: #111; 
-            border: 1px solid #222;
-            cursor: pointer;
-        }
+        .trabajo-card { position: relative; height: 250px; border-radius: 12px; overflow: hidden; background: #111; border: 1px solid #222; cursor: pointer; }
         .trabajo-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
         .trabajo-card:hover img { transform: scale(1.1); filter: grayscale(100%) brightness(0.5); }
-        
-        .trabajo-info { 
-            position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; 
-            opacity: 0; transition: 0.3s; background: rgba(255, 68, 68, 0.2); 
-        }
+        .trabajo-info { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; transition: 0.3s; background: rgba(255, 68, 68, 0.2); }
         .trabajo-card:hover .trabajo-info { opacity: 1; }
         .trabajo-info h4 { font-weight: 900; text-transform: uppercase; font-size: 18px; }
         .trabajo-info span { font-size: 12px; font-weight: 400; letter-spacing: 2px; margin-top: 5px; }
 
-        /* 🚀 SECCIÓN SERVICIOS */
         .servicios { padding: 80px 30px; background: #0a0a0a; }
         .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
         .servicio-card { background: #151515; padding: 30px; border-radius: 15px; border-top: 4px solid var(--accent); transition: 0.3s; }
@@ -109,31 +101,19 @@
         <div class="portafolio-grid">
             <div class="trabajo-card">
                 <img src="https://images.pexels.com/photos/257904/pexels-photo-257904.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Video">
-                <div class="trabajo-info">
-                    <h4>Comercial de Marca</h4>
-                    <span>VIDEO / EDICIÓN</span>
-                </div>
+                <div class="trabajo-info"><h4>Comercial de Marca</h4><span>VIDEO / EDICIÓN</span></div>
             </div>
             <div class="trabajo-card">
                 <img src="https://images.pexels.com/photos/3379934/pexels-photo-3379934.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Foto">
-                <div class="trabajo-info">
-                    <h4>Sesión Retrato</h4>
-                    <span>FOTOGRAFÍA</span>
-                </div>
+                <div class="trabajo-info"><h4>Sesión Retrato</h4><span>FOTOGRAFÍA</span></div>
             </div>
             <div class="trabajo-card">
                 <img src="https://images.pexels.com/photos/2511234/pexels-photo-2511234.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Producto">
-                <div class="trabajo-info">
-                    <h4>Catálogo Gourmet</h4>
-                    <span>FOTOGRAFÍA PRODUCTO</span>
-                </div>
+                <div class="trabajo-info"><h4>Catálogo Gourmet</h4><span>FOTOGRAFÍA PRODUCTO</span></div>
             </div>
             <div class="trabajo-card">
                 <img src="https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Redes">
-                <div class="trabajo-info">
-                    <h4>Contenido Reels</h4>
-                    <span>EDICIÓN DINÁMICA</span>
-                </div>
+                <div class="trabajo-info"><h4>Contenido Reels</h4><span>EDICIÓN DINÁMICA</span></div>
             </div>
         </div>
     </section>
