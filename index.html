@@ -12,7 +12,7 @@
         :root { 
             --bg-color: #080808; 
             --text-main: #ffffff; 
-            --accent: #ff4444; 
+            --accent: #ff4444; /* Rojo REC de cámara 🔴 */
             --accent-hover: #cc0000;
         }
 
@@ -20,11 +20,11 @@
         
         body { background-color: var(--bg-color); color: var(--text-main); overflow-x: hidden; }
 
-        /* 🚧 BARRA DE NAVEGACIÓN OSCURA CON LOGO DE IMAGEN */
+        /* 🚧 BARRA DE NAVEGACIÓN OSCURA */
         header { 
             background: rgba(0, 0, 0, 0.95); 
             backdrop-filter: blur(10px);
-            padding: 10px 30px; /* Reduje el padding para que la barra no sea tan gorda */
+            padding: 20px 30px; 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
@@ -33,16 +33,42 @@
             z-index: 100;
             border-bottom: 1px solid #222; 
         }
-        
-        /* 📸 NUEVO ESTILO PARA EL LOGO (sacamos el texto, metimos la imagen) */
-        .logo-box { 
-            height: 55px; /* Altura de la barra */
-            display: flex; 
-            align-items: center; 
+
+        /* 📸 FABRICACIÓN DEL LOGO CON CÓDIGO (Plan Z) */
+        .logo-cine { 
+            font-size: 24px; 
+            font-weight: 900; /* Lo más grueso posible */
+            letter-spacing: -1.5px; /* Letras pegaditas, estilo moderno */
+            text-transform: uppercase; 
+            color: #f0f0f0; /* Un blanco hueso muy elegante */
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            text-decoration: none; /* Por si lo hacemos enlace luego */
         }
-        .logo-img { 
-            height: 100%; /* La imagen se adapta a la altura del cuadro */
-            object-fit: contain; /* No se estira ni se deforma */
+        .studios-text {
+            font-weight: 400; /* 'Studios' más finito */
+            font-size: 14px;
+            color: #aaa; /* Grisáceo */
+            letter-spacing: 2px; /* Letras separadas */
+            margin-left: 5px;
+        }
+        /* El puntito rojo REC 🔴 */
+        .dot-rec {
+            width: 12px;
+            height: 12px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px var(--accent);
+            animation: parpadeo 2s infinite; /* ¡Efecto de grabación! */
+        }
+
+        /* Animación suave para el puntito */
+        @keyframes parpadeo {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
         }
         
         .btn-contacto { 
@@ -143,8 +169,8 @@
 <body>
 
     <header>
-        <div class="logo-box">
-            <img src="https://files.catbox.moe/p94w1b.png" alt="PUNTO CERO Studios" class="logo-img">
+        <div class="logo-cine">
+            PUNTO CERO <span class="dot-rec"></span> <span class="studios-text">STUDIOS</span>
         </div>
         <a href="#contacto" class="btn-contacto">HABLEMOS</a>
     </header>
